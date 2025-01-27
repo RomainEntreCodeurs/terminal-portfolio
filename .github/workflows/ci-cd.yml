@@ -37,7 +37,7 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Push Docker image
-      run: docker push my-vite-react-app
+      run: docker push terminal-portfolio
 
     - name: Deploy to server
       uses: appleboy/ssh-action@master
