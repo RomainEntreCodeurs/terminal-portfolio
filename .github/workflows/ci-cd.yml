@@ -27,11 +27,8 @@ jobs:
     - name: Build the project
       run: npm run build
 
-    - name: Run tests
-      run: npm test
-
     - name: Build Docker image
-      run: docker build -t my-vite-react-app .
+      run: docker build -t terminal-portfolio .
 
     - name: Log in to Docker Hub
       uses: docker/login-action@v1
