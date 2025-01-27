@@ -28,7 +28,7 @@ jobs:
       run: npm run build
 
     - name: Build Docker image
-      run: docker build -t terminal-portfolio .
+      run: docker build -t rom1dev/terminal-portfolio .
 
     - name: Log in to Docker Hub
       uses: docker/login-action@v1
@@ -37,7 +37,7 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Push Docker image
-      run: docker push terminal-portfolio
+      run: docker push rom1dev/terminal-portfolio
 
     - name: Deploy to server
       uses: appleboy/ssh-action@master
@@ -46,7 +46,7 @@ jobs:
         username: ${{ secrets.SSH_USERNAME }}
         key: ${{ secrets.SSH_KEY }}
         script: |
-          docker pull terminal-portfolio
+          docker pull rom1dev/terminal-portfolio
           docker stop terminal-portfolio || true
           docker rm terminal-portfolio || true
-          docker run -d -p 3009:3000 --name terminal-portfolio terminal-portfolio
+          docker run -d -p 3009:3000 --name terminal-portfolio rom1dev/terminal-portfolio
