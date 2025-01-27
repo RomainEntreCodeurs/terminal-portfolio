@@ -52,4 +52,4 @@ jobs:
           docker pull terminal-portfolio
           docker stop terminal-portfolio || true
           docker rm terminal-portfolio || true
-          docker run -d -p 3000:3000 --name terminal-portfolio terminal-portfolio
+          docker run -d -p 3009:3000 --name terminal-portfolio terminal-portfolio
