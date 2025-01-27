@@ -49,4 +49,4 @@ jobs:
           docker pull rom1dev/terminal-portfolio
           docker stop terminal-portfolio || true
           docker rm terminal-portfolio || true
-          docker run -d -p 3009:3000 --name terminal-portfolio rom1dev/terminal-portfolio
+          docker run -d -p 3009:5173 --name terminal-portfolio rom1dev/terminal-portfolio
