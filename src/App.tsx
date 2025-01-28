@@ -171,7 +171,7 @@ const App: React.FC = () => {
                         value={input}
                         onChange={handleInputChange}
                         onKeyDown={handleInputKeyPress}
-                        className="border-none outline-none text-white flex-1 ml-2"
+                        className="border border-green-500 md:px-2 md:border-none outline-none text-white flex-1 ml-2 w-1/3"
                         autoFocus
                     />
                 </div>

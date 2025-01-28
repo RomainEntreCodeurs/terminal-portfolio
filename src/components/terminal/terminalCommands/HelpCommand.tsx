@@ -12,8 +12,8 @@ export default function HelpCommand({ onCommandClick }: HelpCommandProps) {
         { name: "projects", description: "List of my projects" },
         { name: "contact", description: "How to contact me" },
         { description: "------------------------------------"},
-        { name: "clear", description: "Clear all history terminalCommands" },
-        { name: "lang", description: "Change language of website → lang <fr or en>" },
+        { name: "clear", description: "Clear all history commands" },
+        { name: "lang", description: "Change language of website" },
     ];
 
     return (
@@ -21,7 +21,7 @@ export default function HelpCommand({ onCommandClick }: HelpCommandProps) {
             {availableCommands.map((cmd, index) => (
                 <div key={index} className="mb-1 flex">
                     {cmd.name && (
-                        <div className={"w-1/8"}>
+                        <div className={"w-1/4"}>
                             <span
                                 className="mr-5 text-orange-300 hover:text-orange-100 cursor-pointer"
                                 onClick={() => onCommandClick(cmd.name)}
